@@ -24,12 +24,15 @@
 body {
     margin: 0;
     font-family: Open Sans, Arial, sans-serif;
+    font-weight: 400;
 }
 
 .container {
     max-width: 1200px;
+    padding: 0 15px;
     width: 100%;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 /* ===== Header ===== */
@@ -41,7 +44,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 28px 0 120px;
+    padding: 28px 0 125px;
     color: #ffffff;
 }
 
@@ -57,7 +60,6 @@ body {
     position: relative;
     z-index: 1;
 }
-
 
 .header__inner {
     display: flex;
@@ -96,8 +98,8 @@ body {
 /* ===== Header title ===== */
 
 .header__title {
-    width: 700px;
-    margin: 100px auto 0;
+    width: 690px;
+    margin: 105px auto 0;
     text-align: center;
     text-transform: uppercase;
     font-size: 45px;
@@ -107,7 +109,7 @@ body {
 /* ===== Trends ===== */
 
 .trends {
-    margin-top: 60px;
+    margin-top: 55px;
 }
 
 .trends__title {
@@ -116,6 +118,7 @@ body {
     text-transform: uppercase;
     font-size: 20px;
     margin-bottom: 30px;
+    font-weight: 700;
 }
 
 .trends__title::after {
@@ -172,15 +175,18 @@ body {
     position: relative;
     z-index: 1;
 
-    margin: 20px;
-    padding: 35px 30px;
+    margin: 17px;
+    padding: 32px 35px 35px;
     border: 3px solid rgba(181, 159, 91, 0.6);
+    box-sizing: border-box;
+    width: calc(100% - 40px);
+
 }
 
 .trend__tags {
     list-style: none;
     display: flex;
-    margin: 0 0 15px 0;
+    margin: 0 0 9px 0;
     padding: 0;
 }
 
@@ -214,31 +220,35 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 65px;
+    margin-top: 64px;
 }
 
 .posts {
-    width: 780px;
+    width: 770px;
+    flex-shrink: 0;
 }
 
 /* ===== Post ===== */
 
 .post {
     display: flex;
+    align-items: flex-start;
     margin-bottom: 60px;
 }
 
 .post__image {
-    width: 380px;
+    width: 381px;
     margin-right: 30px;
     display: block;
+    object-fit: cover;
+
 }
 
 .post__tags {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 0 10px 0;
+    margin: -8px 0 10px 0;
     padding: 0;
 }
 
@@ -255,10 +265,11 @@ body {
 }
 
 .post__title {
-    margin: 0 0 20px 0;
+    margin: -5px 0 22px 0;
     font-size: 20px;
     line-height: 24px;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .post__title a {
@@ -268,7 +279,9 @@ body {
 
 .post__meta {
     font-size: 12px;
-    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0 30px;
 }
 
 .post__date {
@@ -282,7 +295,12 @@ body {
 
 .post__text {
     font-size: 15px;
-    line-height: 22px;
+    line-height: 1.48;
+    margin-top: 0;
+}
+
+.post__text:first-of-type {
+    margin-top: 52px;
 }
 
 .post:last-child {
@@ -293,12 +311,17 @@ body {
 
 .sidebar {
     width: 270px;
+    flex-shrink: 0;
 }
 
 /* ===== Sidebar sections ===== */
 
 .sidebar__section {
-    margin-bottom: 60px;
+    margin-bottom: 54px;
+}
+
+.sidebar__section:first-child {
+    margin-top: -27px;
 }
 
 .sidebar__title {
@@ -315,31 +338,34 @@ body {
     width: 65px;
     height: 3px;
     background-color: #b59f5b;
-    margin: 14px auto 0;
+    margin: 10px auto 0;
 }
 
 /* ===== Sidebar post ===== */
 
 .sidebar-post {
     display: flex;
-    margin-bottom: 22px;
+    margin-bottom: 23px;
+    align-items: flex-start;
 }
 
 .sidebar-post__image {
     width: 70px;
-    margin-right: 18px;
+    margin-right: 17px;
 }
 
 .sidebar-post__date {
+    display: block;
     font-size: 12px;
     color: #888;
 }
 
 .sidebar-post__title {
-    margin: 5px 0 0;
+    margin: 0;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 1.25;
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .sidebar-post__title a {
@@ -366,7 +392,6 @@ body {
     -webkit-appearance: none;
     appearance: none;
 }
-
 
 .search__field:focus {
     outline: none;
@@ -400,8 +425,6 @@ body {
     border: none;
     background-color: #f4f7f6;
     font-size: 13px;
-
-
 }
 
 .subscribe__field:focus {
@@ -451,7 +474,7 @@ body {
 
 .tags__item a {
     display: block;
-    padding: 6px 13px;
+    padding: 3px 13px;
 
     border: 3px solid #eeeeee;
 
@@ -477,8 +500,8 @@ body {
 .themes__item {
     display: flex;
     align-items: baseline;
-    padding-bottom: 12px;
-    margin-bottom: 12px;
+    padding-bottom: 13px;
+    margin-bottom: 13px;
     border-bottom: 1px solid #eeeeee;
 }
 
@@ -503,7 +526,8 @@ body {
 /* ===== Products ===== */
 
 .products {
-    margin-top: 65px;
+    margin-top: 60px;
+    margin-bottom: 70px;
 }
 
 .products__title {
@@ -512,6 +536,7 @@ body {
     text-transform: uppercase;
     font-size: 20px;
     margin: 0 0 30px;
+    line-height: 1.1;
 }
 
 .products__title::after {
@@ -520,50 +545,51 @@ body {
     width: 65px;
     height: 3px;
     background-color: #b59f5b;
-    margin: 12px auto 0;
+    margin: 10px auto 0;
 }
 
 .products__items {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
-    gap: 30px;
+
 }
 
 .product {
-    width: calc((100% - 60px) / 3);
+    width: calc((100% - 120px) / 3);
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .product__image {
     display: block;
     width: 300px;
-    margin: 0 auto;
 }
 
 .product__content {
     flex: 1;
     position: relative;
-    margin-top: -45px;
-    padding: 50px 20px 25px;
+    margin-top: -30px;
+    padding: 48px 21px 20px;
     border: 3px solid rgba(181, 159, 91, 0.6);
+    box-sizing: border-box;
 
     display: flex;
     flex-direction: column;
-
 }
 
 .product__title {
-    margin: 0;
+    margin: 0 0 8px 0;
     font-size: 20px;
     text-transform: uppercase;
+    line-height: 1.1;
 }
 
 .product__text {
     font-size: 15px;
     line-height: 22px;
     margin: 0 0 10px;
+    line-height: 1.3;
 }
 
 .product__text a {
@@ -574,14 +600,16 @@ body {
 .product__footer {
     display: flex;
     justify-content: space-between;
-    margin-top: 25px;
+    margin-top: 19px;
+    align-items: center;
 
 }
 
 .product__prices {
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
+    min-height: 48px;
 }
 
 .product__price {
@@ -591,6 +619,10 @@ body {
 
 .product__price_old {
     text-decoration: line-through;
+    margin-bottom: -5px;
+    display: block;
+    margin-top: -5px;
+    line-height: 1;
 }
 
 .product__price_new {
@@ -600,13 +632,13 @@ body {
 .product__button {
     height: 48px;
     padding: 0 28px;
+    font-size: 14px;
     border: none;
     background-color: #b59f5b;
     color: #fff;
     font-weight: 700;
     text-transform: uppercase;
     cursor: pointer;
-    margin-top: auto;
 }
 
 .product__button:hover {
@@ -617,13 +649,17 @@ body {
 /* ===== Footer ===== */
 
 .footer {
-    padding: 30px 0;
-    margin-top: 65px;
+    padding: 0;
+    margin-top: 0;
 }
 
 .footer__socials {
-    background-color: #f4f7f6;
-    padding: 30px 0;
+    padding: 0;
+}
+
+.footer__socials .container {
+    max-width: 1200px;
+    padding: 0 15px;
 }
 
 .footer__copyright {
@@ -634,12 +670,15 @@ body {
     list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
+    background-color: #f4f7f6;
+    padding: 30px 0;
 }
 
 .socials__item:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 25px;
 }
 
 .socials__link {
@@ -668,6 +707,8 @@ body {
     font-size: 12px;
     color: #999999;
     font-weight: 700;
+    margin-top: 40px;
+
 }
 
 /* ===== Popup ===== */
@@ -681,12 +722,13 @@ body {
 
 .popup__content {
     position: absolute;
-    top: 50%;
+    top: 245px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
 
     width: 390px;
-    padding: 50px 30px;
+
+    padding: 48px 30px;
     background-color: #ffffff;
 }
 
@@ -709,12 +751,10 @@ body {
     cursor: pointer;
 }
 
-
-
 /* ===== Title ===== */
 
 .popup__title {
-    margin: 0 0 25px;
+    margin: 0 0 20px;
     text-align: center;
     text-transform: uppercase;
     font-size: 20px;
@@ -739,7 +779,7 @@ body {
 .popup__label {
     display: flex;
     flex-direction: column;
-    margin-bottom: 25px;
+    margin-bottom: 12px;
     font-size: 13px;
 }
 
@@ -798,16 +838,14 @@ body {
 }
 
 .popup__radio {
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 .popup__fieldset {
     border: none;
-    margin: 0 0 30px;
+    margin: 0 0 25px;
     padding: 0;
 }
-
-
 
 /* ===== Textarea ===== */
 
@@ -829,6 +867,8 @@ body {
 .popup__button {
     width: 100%;
     height: 48px;
+    margin-top: 12px;
+    margin-bottom: 10px;
 
     background-color: #b59f5b;
     border: none;
@@ -852,4 +892,53 @@ body {
 
 .popup_hidden {
     display: none;
+}
+
+/* ===== Interactive states (hover / focus) ===== */
+.menu__item a:hover,
+.menu__item a:focus {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.trend__tag a:hover,
+.trend__tag a:focus {
+    text-decoration: underline;
+    text-decoration-color: #b59f5b;
+}
+
+.trend__title a:hover,
+.trend__title a:focus {
+    color: #b59f5b;
+}
+
+.search__field:focus,
+.subscribe__field:focus {
+    outline: 1px solid #b59f5b;
+}
+
+.themes__link:hover,
+.themes__link:focus {
+    color: #b59f5b;
+}
+
+.post__title a:hover,
+.post__title a:focus {
+    color: #b59f5b;
+}
+
+.post__tag a:hover,
+.post__tag a:focus {
+    text-decoration: underline;
+    text-decoration-color: #b59f5b;
+}
+
+.product__text a:hover,
+.product__text a:focus {
+    text-decoration: underline;
+    text-decoration-color: #b59f5b;
+}
+
+.nowrap {
+    white-space: nowrap;
 }
