@@ -11,27 +11,32 @@
 <body>
 
     <header class="header">
-        <div class="container header__inner">
-            <a class="logo" href="#">
-                <img src="svg/noemi-logo.svg" alt="NOEMI">
-            </a>
+        <div class="container">
+            <div class="header__inner">
+                <a class="logo" href="#">
+                    <img src="svg/noemi-logo.svg" alt="NOEMI">
+                </a>
 
-            <nav class="menu">
-                <ul class="menu__list">
-                    <li class="menu__item"><a href="#">Главная</a></li>
-                    <li class="menu__item"><a href="#">Посты</a></li>
-                    <li class="menu__item"><a href="#">Статьи</a></li>
-                    <li class="menu__item"><a href="#">Теги</a></li>
-                    <li class="menu__item"><a href="#">Темы</a></li>
-                    <li class="menu__item"><a href="#">Контакты</a></li>
-                </ul>
-            </nav>
+                <button class="header__burger" type="button">
+                    <span class="visually-hidden">Открыть меню</span>
+                </button>
 
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="#">Главная</a></li>
+                        <li class="menu__item"><a href="#">Посты</a></li>
+                        <li class="menu__item"><a href="#">Статьи</a></li>
+                        <li class="menu__item"><a href="#">Теги</a></li>
+                        <li class="menu__item"><a href="#">Темы</a></li>
+                        <li class="menu__item"><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <h1 class="header__title">
+                Блог о творчестве, спорте, и образе жизни
+            </h1>
         </div>
-
-        <h1 class="header__title">
-            Блог о творчестве, спорте, и образе жизни
-        </h1>
     </header>
 
     <main class="content">
@@ -396,7 +401,11 @@
                 <div class="products__items">
 
                     <article class="product">
-                        <img class="product__image" src="images/shop-item-desk1.jpg" alt="Подушки на диван">
+                        <picture>
+                            <source srcset="images/shop-item-desk1.jpg" media="(min-width:1200px)">
+                            <source srcset="images/shop-item-tablet1.jpg" media="(min-width:641px)">
+                            <img class="product__image" src="images/shop-item-mobile1.jpg" alt="Подушки">
+                        </picture>
 
                         <div class="product__content">
                             <h3 class="product__title">Подушки на диван</h3>
@@ -421,7 +430,11 @@
 
 
                     <article class="product">
-                        <img class="product__image" src="images/shop-item-desk2.jpg" alt="Кукла зайчик">
+                        <picture>
+                            <source srcset="images/shop-item-desk2.jpg" media="(min-width:1200px)">
+                            <source srcset="images/shop-item-tablet2.jpg" media="(min-width:641px)">
+                            <img class="product__image" src="images/shop-item-mobile2.jpg" alt="Кукла зайчик">
+                        </picture>
 
                         <div class="product__content">
                             <h3 class="product__title">Кукла «Зайчик»</h3>
@@ -443,7 +456,11 @@
                     </article>
 
                     <article class="product">
-                        <img class="product__image" src="images/shop-item-desk3.jpg" alt="Шестиугольная рамка">
+                        <picture>
+                            <source srcset="images/shop-item-desk3.jpg" media="(min-width:1200px)">
+                            <source srcset="images/shop-item-tablet3.jpg" media="(min-width:641px)">
+                            <img class="product__image" src="images/shop-item-mobile3.jpg" alt="Шестиугольная рамка">
+                        </picture>
 
                         <div class="product__content">
                             <h3 class="product__title">Шестиугольная рамка</h3>
@@ -548,7 +565,7 @@
                 </fieldset>
 
                 <label class="popup__label">
-                    Расскажите, какой контент вы хотели бы видеть <span class="nowrap">на нашем сайте?</span>
+                    Расскажите, какой контент вы хотели бы видеть на нашем сайте?
                     <textarea class="popup__textarea" placeholder="Может, больше рецептов?"></textarea>
                 </label>
 
